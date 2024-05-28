@@ -18,15 +18,15 @@ function classNames(...classes) {
 
 export default function Categories() {
   return (
-    <Menu as="div" className="relative ml-3">
+    <Menu as="div" className="relative">
       <div>
-        <MenuButton className="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+        <MenuButton className="relative flex rounded-full bg-orange-700 text-sm focus:outline-none focus:ring-2 focus:ring-orange-100 focus:ring-offset-2 focus:ring-offset-orange-700">
           <span className="absolute -inset-1.5" />
           <span className="sr-only">Open user menu</span>
           <div className="flex items-center justify-start text-orange-900 bg-orange-100 py-3 px-4 rounded-full gap-2">
             {" "}
             <Bars2Icon className="h-5 w-5 text-orange-800 inline-flex" />{" "}
-            <span>Categorias</span>
+            <span className="text-sm">Categorias</span>
           </div>
         </MenuButton>
       </div>
