@@ -10,8 +10,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="es" className="h-full">
-      <body className={`h-full ${inter.className}`}>{children}</body>
+    <html lang="es" className="h-[calc(100vh-3rem)]">
+      <body className={`h-[calc(100vh-3rem)] ${inter.className}`}>{children}</body>
     </html>
   );
 }

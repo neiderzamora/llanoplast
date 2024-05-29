@@ -1,11 +1,9 @@
-import Navbar from "@/components/navbar/navbar";
-import ListProducts from "@/components/products/list";
+import Results from "@/components/home/results";
 
 export default function Home() {
   return (
     <>
-    <Navbar/>
-    <ListProducts/>
+    <Results/>
     </>
   );
 }
