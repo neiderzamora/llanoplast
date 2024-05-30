@@ -1,10 +1,16 @@
 // components/Categories.js
-'use client';
+"use client";
 
-import { Menu, Transition, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
+import {
+  Menu,
+  Transition,
+  MenuButton,
+  MenuItem,
+  MenuItems,
+} from "@headlessui/react";
 import { Bars2Icon } from "@heroicons/react/24/solid";
 import { CATEGORIES } from "@/utils/categories"; // Asegúrate de que la ruta sea correcta
-import { useState } from 'react';
+import { useState } from "react";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -25,7 +31,7 @@ const Categories = ({ filterProductsByCategory }) => {
           <span className="absolute -inset-1.5" />
           <span className="sr-only">Open user menu</span>
           <div className="flex items-center justify-start text-orange-900 bg-orange-100 py-3 px-4 rounded-full gap-1">
-            <Bars2Icon className="h-5 w-5 text-orange-800 inline-flex" /> 
+            <Bars2Icon className="h-5 w-5 text-orange-800 inline-flex" />
             <span className="text-sm font-semibold">Categorias</span>
           </div>
         </MenuButton>
@@ -38,7 +44,7 @@ const Categories = ({ filterProductsByCategory }) => {
         leaveFrom="transform opacity-100 scale-100"
         leaveTo="transform opacity-0 scale-95"
       >
-        <MenuItems className="absolute z-10 mt-2 -ml-12 lg:mr-0 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+        <MenuItems className="absolute z-10 mt-2 -ml-12 lg:mr-0 w-48 max-h-[20rem] lg:max-h-[30rem] overflow-y-auto origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
           <MenuItem>
             <p
               onClick={() => handleCategorySelect("Todos")}
