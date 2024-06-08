@@ -10,7 +10,7 @@ const Results = () => {
 
   const handleSearch = (query) => {
     if (query.trim() === "") {
-      setResults(undefined); // Resetea los resultados a undefined cuando la búsqueda está vacía
+      setResults(undefined);
     } else {
       const filteredResults = PRODUCTS.filter(product =>
         product.name.toLowerCase().includes(query.toLowerCase())
@@ -21,7 +21,7 @@ const Results = () => {
 
   const filterProductsByCategory = (category) => {
     if (category === "Todos") {
-      setResults(undefined); // Mostrar todos los productos
+      setResults(undefined);
     } else {
       const filteredResults = PRODUCTS.filter(product =>
         product.category === category

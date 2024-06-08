@@ -1,3 +1,5 @@
+"use client"
+
 import Image from "next/image";
 import { PRODUCTS } from "@/utils/products";
 
@@ -28,18 +30,19 @@ export default function ListProducts({ results }) {
                 <Image
                   height={250}
                   width={250}
-                  src={product.imageSrc}
+                  src={`https://llanoplast.com${product.imageSrc}`}
                   alt={product.name}
                   className="group-hover:opacity-75"
+                  unoptimized
                 />
               </div>
               <h3 className="mt-4 text-lg font-semibold text-gray-700 px-2">
                 {toTitleCase(product.name)}
               </h3>
               {product.variation.length > 0 && (
-                <div className="text-gray-700 bg-orange-200/40 rounded-lg py-1 px-2 my-3">
+                <div className="text-gray-700 bg-[#0688cc]/40 rounded-lg py-1 px-2 my-3">
                   <span>Variación</span>
-                  <p className="mt-1 text-sm font-medium text-orange-800/50">
+                  <p className="mt-1 text-sm font-medium text-[#6c6d70]/90">
                     {product.variation.join(", ")}
                   </p>
                 </div>
