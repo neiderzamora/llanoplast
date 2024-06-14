@@ -31,7 +31,7 @@ export default function ListProducts({ results }) {
                 <Image
                   height={250}
                   width={250}
-                  src={`${product.imageSrc}`}
+                  src={`https://llanoplast.com${product.imageSrc}`}
                   alt={product.name}
                   className="group-hover:opacity-75"
                   unoptimized
