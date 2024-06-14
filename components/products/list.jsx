@@ -26,15 +26,17 @@ export default function ListProducts({ results }) {
         <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
           {productsToShow.map((product) => (
             <div key={product.id} className="group">
-              <div className="flex justify-center items-center overflow-hidden p-2 border sm:p-3 lg:p-2 rounded-md sm:rounded-xl bg-white h-[25rem] max-w-[26rem] sm:h-[22rem] sm:max-w-[25rem] lg:h-[24rem] lg:max-w-[20rem] hover:border-2">
+              <div className="flex items-center justify-center">
+              <div className="flex justify-center items-center overflow-hidden p-2 border sm:p-3 lg:p-2 rounded-md sm:rounded-xl bg-white h-[15rem] max-w-[12rem] sm:h-[22rem] sm:max-w-[25rem] lg:h-[24rem] lg:max-w-[20rem] hover:border-2">
                 <Image
                   height={250}
                   width={250}
-                  src={`https://llanoplast.com${product.imageSrc}`}
+                  src={`${product.imageSrc}`}
                   alt={product.name}
                   className="group-hover:opacity-75"
                   unoptimized
                 />
+              </div>
               </div>
               <h3 className="mt-4 text-lg font-semibold text-gray-700 px-2">
                 {toTitleCase(product.name)}

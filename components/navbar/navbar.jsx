@@ -20,8 +20,10 @@ export default function Navbar({ handleSearch, filterProductsByCategory }) {
       <Image
         height={500}
         width={500}
+        alt="logo"
         className="hidden lg:block h-24 w-24 lg:h-16 lg:w-16 rounded-full bg-white p-1 text-center"
-        src="/logo.png"
+        src="https://llanoplast.com/logo.webp"
+        unoptimized
       />
         <SearchNavbar onSearch={handleSearch} />
         <Categories filterProductsByCategory={filterProductsByCategory} />
